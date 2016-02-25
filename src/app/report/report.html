@@ -3,16 +3,19 @@
     <h2>Recent Encounters</h2>
     <p class="tagline">Safety on Mars is your responsibility</p>
   </header>
-  <form>
-    <select>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
+  <div>
+    <label>Select alien type</label>
+    <select name="alien type" ng-model="aliens.type">
+      <option value="">Select alien type</option>
+      <option value="{{ alien.id }}" ng-repeat="alien in aliens">
+        {{ alien.type }}
+      </option>
     </select>
-    <textarea type="text" name="action" placeholder="Action taken"></textarea>
-  </form>
-  <footer>
+    <textarea type="text" name="action" placeholder="Action taken" ng-model="encounters.action"></textarea>
+  </div>
+  <button ng-click="submit($event)">
     <h1>Submit<br>
       Report
     </h1>
-  </footer>
+  </button>
 </div>

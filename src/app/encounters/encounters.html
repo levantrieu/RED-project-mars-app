@@ -3,13 +3,16 @@
     <h2>Recent Encounters</h2>
     <p class="tagline">See an Alien? Report it!</p>
   </header>
-  <div class="encounters-report">
-    2015-12-09 - Endomorph<br>
-    Beat him up
+  <div class="report-wrapper">
+    <ul>
+      <li class="encounters-report" ng-repeat="report in encounters">{{ report.date }} - {{ report.atype }}<br>
+          {{ report.action }}
+      </li>
+    </ul>
   </div>
-  <footer>
+  <button>
     <h1>Report<br>
       Encounters
     </h1>
-  </footer>
+  </button>
 </div>

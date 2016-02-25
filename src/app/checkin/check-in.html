@@ -1,12 +1,18 @@
 <div class="check-in">
   <h1>Register</h1>
-  <form>
-    <input type="text" name="name" placeholder="Name" />
-    <input type="number" name="age" placeholder="Age" />
-    <select name="occupation" placeholder="Select occupation">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
+  <div>
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Name" ng-model="colonist.name" />
+    <label>Age:</label>
+    <input type="number" name="age" placeholder="Age" ng-model="colonist.age" />
+    <label>Select a job</label>
+    <select name="job" ng-model="colonist.job_id">
+      <option value="">Select a job</option>
+      <option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
     </select>
-  </form>
-  <h1>Check in</h1>
+    <button ng-click="login($event)">
+      <h1>Check in</h1>
+    </button>
+    {{ colonist.id }}
+  </div>
 </div>
