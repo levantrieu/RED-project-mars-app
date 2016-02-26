@@ -13,7 +13,7 @@
 
     $scope.reportEncounters = function($event){
       event.preventDefault();
-      $scope.go('report');
+      //$scope.go('report');
     };
 
 

@@ -43,7 +43,7 @@
         $rootScope.colonist = response.data.colonist;
 
         //to store the colonist object
-        $cookies.putObject('new-colonist', response.data.colonist)
+        $cookies.putObject('new-colonist', response.data.colonist);
 
         //$state goes to the state called encounters not the url
         $state.go('encounters');

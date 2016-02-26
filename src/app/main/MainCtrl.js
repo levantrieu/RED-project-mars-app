@@ -15,7 +15,7 @@
       $scope.enter = function($event){
         event.preventDefault();
         $state.go('check-in');
-      }
+      };
   }
 
 
