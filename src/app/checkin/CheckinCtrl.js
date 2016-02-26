@@ -2,8 +2,8 @@
   'use strict';
 
   angular
-    .module('red')
-    .controller('CheckinCtrl', CheckinCtrl);
+  .module('red')
+  .controller('CheckinCtrl', CheckinCtrl);
 
   /** @ngInject */
   function CheckinCtrl($scope, $rootScope, $http, $state, $cookies) {
@@ -12,6 +12,8 @@
 
     //this refers to the colonist JSON object
     $scope.colonist = {};
+    //form validation
+    $scope.validate = false;
 
     //first http request function handles success. The second handles error
     //fetch all jobs
@@ -30,28 +32,44 @@
     $scope.login = function($event){
       event.preventDefault();
 
-      //if($scope.checkinForm.$invalid){
+      // $scope.checkValid = function() {
+      //   if($scope.validate && $scope.checkinForm.length) {
+      //     $scope.validate = false;
+      //   }
+      // };
+//       if($scope.newTodo) {
+//   $scope.todos.push({ text: $scope.newTodo, completed: false })
+// $scope.newTodo = '';
+// } else {
+//   $scope.validate = true;
+// }
+// }
 
-    //} else {
 
-      $http({
-        method: 'POST',
-        url: COLONIST_POST_URL,
-        data: {'colonist': $scope.colonist}
+      if($scope.checkinForm.$invalid){
+        $scope.validate = true;
 
-      }).then(function(response){
-        $rootScope.colonist = response.data.colonist;
+      } else {
 
-        //to store the colonist object
-        $cookies.putObject('new-colonist', response.data.colonist);
+        $http({
+          method: 'POST',
+          url: COLONIST_POST_URL,
+          data: {'colonist': $scope.colonist}
 
-        //$state goes to the state called encounters not the url
-        $state.go('encounters');
+        }).then(function(response){
+          $rootScope.colonist = response.data.colonist;
 
-      }, function(error){
-        console.log(error);
-        //todo - handle error
-      });
+          //to store the colonist object
+          $cookies.putObject('new-colonist', response.data.colonist);
+
+          //$state goes to the state called encounters not the url
+          $state.go('encounters');
+
+        }, function(error){
+          console.log(error);
+          //todo - handle error
+        });
+      }
     };
   }
 })();

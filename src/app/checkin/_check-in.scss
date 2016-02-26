@@ -1,16 +1,24 @@
 .check-in {
-background-color: #000;
-width: 100vw;
-height: 100vh;
-display: flex;
-flex-direction: column;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+    p {
+      font-size: 1.5rem;
+      color: #fff;
+    }
 
   h1 {
     align-self: center;
   }
 
   form {
+    width: 80vw;
     align-self: center;
+    display: flex;
+    flex-direction: column;
 
     input select option {
       font-family: 'Exo', sans-serif;
@@ -19,6 +27,32 @@ flex-direction: column;
       width: 80%;
       padding: 1rem;
       margin: 1rem 1rem;
+    }
+  }
+
+  .checkin-form input.ng-invalid.ng-touched {
+    animation: border 2s infinite;
+    margin: 1rem;
+  }
+
+  // .checkin-form input.ng-valid.ng-touched {
+  //   background-color: #78FA89;
+  // }
+
+  .checkin-form select.ng-invalid.ng-touched {
+    background-color: #E22569;
+  }
+
+  // .invalid {
+  //   animation: border 1s infinite;
+  // }
+  //
+  @keyframes border {
+    0% {
+      box-shadow: 2px 2px 2px 1px rgba(255, 0, 0, 0);
+    }
+    100% {
+      box-shadow: 2px 2px 2px 1px rgba(255, 0, 0, 1);
     }
   }
 }

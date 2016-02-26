@@ -2,11 +2,11 @@
   'use strict';
 
   angular
-    .module('red')
-    .controller('ReportCtrl', ReportCtrl);
+  .module('red')
+  .controller('ReportCtrl', ReportCtrl);
 
   /** @ngInject */
-  function ReportCtrl($scope, $http, $rootScope, $cookies, $filter) {
+  function ReportCtrl($scope, $http, $rootScope, $cookies, $state, $filter) {
     var ALIENS_GET_URL = 'https://red-wdp-api.herokuapp.com/api/mars/aliens';
     var REPORT_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
@@ -35,6 +35,8 @@
 
     $scope.submit = function($event){
       event.preventDefault();
+      $state.go('report-filed');
+      $state.go('encounters');
 
       $http({
         method: 'POST',
@@ -43,10 +45,12 @@
 
       }).then(function(response){
         console.log(response);
+
       }, function(error){
         console.log(error);
         //todo - handle error
       });
+
     };
   }
 

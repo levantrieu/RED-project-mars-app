@@ -1,12 +1,10 @@
 <div class="check-in">
   <h1>Register</h1>
-  <form name="checkinForm" ng-clas="{ 'show-validation' : validate }">
-    <label>Name:</label>
-    <input type="text" name="name" placeholder="Name" ng-model="colonist.name" />
-    <label>Age:</label>
-    <input type="number" name="age" placeholder="Age" ng-model="colonist.age" />
-    <label>Select a job</label>
-    <select name="job" ng-model="colonist.job_id">
+  <p ng-if="validate">Please fill in the form.</p>
+  <form name="checkinForm" class="checkin-form" novalidate>
+    <input type="text" name="name" placeholder="Name" ng-model="colonist.name" ng-change="checkValid()" required />
+    <input type="number" name="age" placeholder="Age" ng-model="colonist.age" ng-change="checkValid()" required />
+    <select name="job" ng-model="colonist.job_id" ng-change="checkValid()" required>
       <option value="">Select a job</option>
       <option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
     </select>
