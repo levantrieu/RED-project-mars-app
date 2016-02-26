@@ -5,7 +5,7 @@
   </header>
   <div class="report-wrapper">
     <ul>
-      <li class="encounters-report" ng-repeat="report in encounters | orderBy: '-date' ">{{ report.date }} - {{ report.atype }}<br>
+      <li class="encounters-report" ng-repeat="report in encounters | orderObjectBy: 'date':true ">{{ report.date }} - {{ report.atype }}<br>
           {{ report.action }}
       </li>
     </ul>

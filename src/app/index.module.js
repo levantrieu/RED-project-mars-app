@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('red', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router']);
+    .module('red', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'ngOrderObjectBy']);
 
 })();
