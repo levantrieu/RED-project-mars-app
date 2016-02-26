@@ -12,29 +12,13 @@ flex-direction: column;
   form {
     align-self: center;
 
-    input {
+    input select option {
       font-family: 'Exo', sans-serif;
       font-size: 2rem;
       color: red;
       width: 80%;
       padding: 1rem;
       margin: 1rem 1rem;
-    }
-
-    select {
-      font-family: 'Exo', sans-serif;
-      font-size: 2rem;
-      color: red;
-      width: 80%;
-      height: 2rem;
-      padding: 1rem;
-      margin: 1rem 1rem;
-
-      option {
-        height: 2rem;
-        padding: 1rem;
-        margin: 1rem 1rem;
-      }
     }
   }
 }

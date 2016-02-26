@@ -11,6 +11,12 @@
 
     $scope.encounters = {};
 
+    $scope.reportEncounters = function($event){
+      event.preventDefault();
+      $scope.go('report');
+    };
+
+
     $http({
       method: 'GET',
       url: ENCOUNTERS_GET_URL,
@@ -20,7 +26,6 @@
     }, function(error){
       //add error handling
     });
-
   }
 
 })();
