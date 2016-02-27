@@ -27,7 +27,7 @@
       //add error handling
     });
 
-    $cookies.putObject('new-colonist', undefined);
+    // $cookies.putObject('new-colonist', undefined);
 
     $scope.login = function($event){
       event.preventDefault();
