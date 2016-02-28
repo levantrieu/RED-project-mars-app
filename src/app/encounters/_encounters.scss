@@ -2,12 +2,11 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
 
   header {
-    align-self: center;
     text-align: center;
+    margin: 0 auto;
   }
 
   h2 {
@@ -16,7 +15,6 @@
     font-weight: 200;
     color: red;
     margin-bottom: 0rem;
-    align-self: center;
   }
 
   .tagline {
@@ -24,14 +22,12 @@
     font-size: 1.75rem;
     font-weight: 200;
     color: #000;
-    margin-top: 0rem;
-    align-self: center;
+    margin: 0rem;
   }
 
   .report-wrapper {
     overflow-y: auto;
-    flex: 0 1 70%;
-    max-height: 500px;
+    max-height: 35rem;
   }
 
   .encounters-report {
@@ -43,10 +39,21 @@
     padding: 1rem 0rem;
   }
 
-  footer {
-    width: 100vw;
+  p {
+    font-family: 'Exo', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 4rem;
+  }
+
+  button {
     background-color: #000;
-    cursor: pointer;
-    text-align: center;
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

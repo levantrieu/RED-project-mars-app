@@ -3,19 +3,19 @@
     <h2>Recent Encounters</h2>
     <p class="tagline">Safety on Mars is your responsibility</p>
   </header>
-  <div>
-    <!-- <label>Select alien type</label> -->
-    <select name="alien type" ng-model="encounters.atype">
-      <option value="">Select alien type</option>
-      <option value="{{ alien.type }}" ng-repeat="alien in aliens">
-        {{ alien.type }}
-      </option>
-    </select>
-    <textarea type="text" name="action" placeholder="Action taken" ng-model="encounters.action"></textarea>
-  </div>
-  <button ng-click="submit($event)">
-    <h1>Submit<br>
-      Report
-    </h1>
-  </button>
+  <form name="reportForm" class="report-form" novalidate>
+    <div class="alien-select">
+      <select name="alien type" ng-model="encounters.atype" required>
+        <option value="">Select alien type</option>
+        <option value="{{ alien.type }}" ng-repeat="alien in aliens">
+          {{ alien.type }}
+        </option>
+      </select>
+    </div>
+    <textarea type="text" name="action" placeholder="Action taken" ng-model="encounters.action" required></textarea>
+    <p ng-if="validate">Please fill in the form.</p>
+    <button ng-click="submit($event)">
+      <h1>Submit Report</h1>
+    </button>
+  </form>
 </div>

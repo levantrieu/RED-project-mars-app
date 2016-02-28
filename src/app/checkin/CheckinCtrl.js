@@ -27,24 +27,8 @@
       //add error handling
     });
 
-    // $cookies.putObject('new-colonist', undefined);
-
     $scope.login = function($event){
       event.preventDefault();
-
-      // $scope.checkValid = function() {
-      //   if($scope.validate && $scope.checkinForm.length) {
-      //     $scope.validate = false;
-      //   }
-      // };
-//       if($scope.newTodo) {
-//   $scope.todos.push({ text: $scope.newTodo, completed: false })
-// $scope.newTodo = '';
-// } else {
-//   $scope.validate = true;
-// }
-// }
-
 
       if($scope.checkinForm.$invalid){
         $scope.validate = true;

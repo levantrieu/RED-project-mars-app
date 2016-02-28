@@ -8,6 +8,7 @@
 @import "checkin/check-in";
 @import "encounters/encounters";
 @import "report/report";
+@import "page-animations";
 
 @import url(https://fonts.googleapis.com/css?family=Exo:400,200);
 
@@ -42,39 +43,6 @@ h1 {
   text-transform: uppercase;
 }
 
-/* ============ animation ==================*/
-
-.ui-view-container {
-  position: relative;
-  height: 565px;
-}
-
-[ui-view].ng-enter, [ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  transition:all .5s ease-in-out;
-}
-
-[ui-view].ng-enter {
-  opacity: 0;
-  transform:scale3d(0.5, 0.5, 0.5);
-}
-
-[ui-view].ng-enter-active {
-  opacity: 1;
-  transform:scale3d(1, 1, 1);
-}
-
-[ui-view].ng-leave {
-  opacity: 1;
-  transform:translate3d(0, 0, 0);
-}
-
-[ui-view].ng-leave-active {
-  opacity: 0;
-  transform:translate3d(100px, 0, 0);
-}
 
 /**
 *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject

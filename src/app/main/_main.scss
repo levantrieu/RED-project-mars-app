@@ -9,21 +9,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden;
   }
 
-  .header {
+  header {
     align-self: center;
+    margin-top: 2rem;
+  }
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    padding-bottom: 5.5rem;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .circle-one {
     width: 26rem;
     height: 26rem;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
     align-self: center;
     display: flex;
     justify-content: center;
+    animation: pulse 2s infinite;
+    animation-delay: 1s;
   }
 
   .circle-two {
@@ -34,6 +48,8 @@
     align-self: center;
     display: flex;
     justify-content: center;
+    animation: pulse 2s infinite;
+    animation-delay: 0.75s;
   }
 
   .circle-three {
@@ -44,6 +60,8 @@
     align-self: center;
     display: flex;
     justify-content: center;
+    animation: pulse 2s infinite;
+    animation-delay: 0.5s;
   }
 
   .circle-four {
@@ -54,6 +72,8 @@
     align-self: center;
     display: flex;
     justify-content: center;
+    animation: pulse 2s infinite;
+    animation-delay: 0.25s;
   }
 
   .circle-five {
@@ -62,12 +82,50 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
     align-self: center;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    10% {
+      background-color: rgba(255, 255, 255, 0.035);
+    }
+    20% {
+      background-color: rgba(255, 255, 255, 0.045);
+    }
+    30% {
+      background-color: rgba(255, 255, 255, 0.055);
+    }
+    40% {
+      background-color: rgba(255, 255, 255, 0.065);
+    }
+    50% {
+      background-color: rgba(255, 255, 255, 0.075);
+    }
+    60% {
+      background-color: rgba(255, 255, 255, 0.065);
+    }
+    70% {
+      background-color: rgba(255, 255, 255, 0.055);
+    }
+    80% {
+      background-color: rgba(255, 255, 255, 0.045);
+    }
+    90% {
+      background-color: rgba(255, 255, 255, 0.035);
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0);
+    }
   }
 
   .enter {
     font-family: 'Exo', sans-serif;
     font-size: 1.75rem;
     color: #fff;
+    margin-bottom: 3rem;
     align-self: center;
   }
 

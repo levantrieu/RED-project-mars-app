@@ -1,13 +1,17 @@
 <div class="check-in">
-  <h1>Register</h1>
-  <p ng-if="validate">Please fill in the form.</p>
+  <header>
+    <h1>Register</h1>
+  </header>
   <form name="checkinForm" class="checkin-form" novalidate>
-    <input type="text" name="name" placeholder="Name" ng-model="colonist.name" ng-change="checkValid()" required />
-    <input type="number" name="age" placeholder="Age" ng-model="colonist.age" ng-change="checkValid()" required />
-    <select name="job" ng-model="colonist.job_id" ng-change="checkValid()" required>
-      <option value="">Select a job</option>
-      <option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
-    </select>
+    <input type="text" name="name" placeholder="Name" ng-model="colonist.name" required />
+    <input type="number" name="age" placeholder="Age" ng-model="colonist.age" required />
+    <div class="job-select">
+      <select name="job" ng-model="colonist.job_id" required>
+        <option value="">Select a job</option>
+        <option value="{{ job.id }}" ng-repeat="job in jobs">{{ job.name }}</option>
+      </select>
+    </div>
+    <p ng-if="validate">Please fill in the form.</p>
     <button ng-click="login($event)">
       <h1>Check in</h1>
     </button>

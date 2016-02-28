@@ -11,7 +11,7 @@
     var REPORT_POST_URL = 'https://red-wdp-api.herokuapp.com/api/mars/encounters';
 
     $scope.aliens = {};
-    console.log($rootScope.colonist);
+    $scope.validate = false;
 
     var atype = $scope.aliens.type;
 
@@ -35,22 +35,27 @@
 
     $scope.submit = function($event){
       event.preventDefault();
-      $state.go('report-filed');
-      $state.go('encounters');
 
-      $http({
-        method: 'POST',
-        url: REPORT_POST_URL,
-        data: {'encounter': $scope.encounters},
+      if($scope.reportForm.$invalid){
+        $scope.validate = true;
 
-      }).then(function(response){
-        console.log(response);
+      } else {
 
-      }, function(error){
-        console.log(error);
-        //todo - handle error
-      });
+        $http({
+          method: 'POST',
+          url: REPORT_POST_URL,
+          data: {'encounter': $scope.encounters},
 
+        }).then(function(response){
+          $state.go('report-filed');
+          $state.go('encounters');
+
+        }, function(error){
+          console.log(error);
+          //todo - handle error
+        });
+
+      }
     };
   }
 
