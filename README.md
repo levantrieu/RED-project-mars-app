@@ -1,19 +1,20 @@
-## AngularJS - Seed application
+# Angular Mars Encounters Report Project
 
-This repository contains the basic application scaffold for **Project 4**. <br>
-It is based on the [generator-angular](https://github.com/yeoman/generator-angular)  application boilerplate.
+Please view the site deployed site on [Firebase](https://mars-encounters.firebaseapp.com/)
 
-To install this project on your computer:
+**Project Brief**
 
-Step 1 : Create a directory for on your computer and clone this repository:
+This is an app that allows a user to register and log a report of an alien encounter. It is built with the Angular framework.
 
-	git clone https://github.com/redacademy/angular-project.git .
-    
-Step 2 : From the project's root directory, install the project dependencies:
-	
-    npm install && bower install
-    
-Step 3 : The project should now be installed. Start the local development server by typing:
+**Tools and Methods Used**
 
-	gulp serve
+- AngularJS
+- HTML/CSS
+- Flexbox
+- Fluid design
+- Accessing an API with GET and POST requests
+- Git and GitHub
 
+**Personal Summary**
+
+I really enjoyed learning the Angular framework and applying the concepts for this project. I can appreciate how the 2 way data binding is a powerful tool for working with user interactions.

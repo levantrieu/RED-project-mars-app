@@ -1,0 +1,9 @@
+{
+  "firebase": "mars-encounters",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
