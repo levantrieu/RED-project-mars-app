@@ -6,6 +6,7 @@
 
   header {
     text-align: center;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -28,6 +29,7 @@
   .report-wrapper {
     overflow-y: auto;
     max-height: 35rem;
+    width: 100%;
   }
 
   .encounters-report {
