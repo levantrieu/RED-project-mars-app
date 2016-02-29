@@ -74,10 +74,11 @@
 
       h1 {
         color: red;
-      }
 
-      &:hover {
-        cursor: pointer;
+        &:hover {
+          cursor: pointer;
+          color: #fff;
+        }
       }
     }
   }

@@ -86,8 +86,13 @@
     outline: none;
     margin-top: 2rem;
 
-    &:hover {
-      cursor: pointer;
+    h1 {
+      color: red;
+
+      &:hover {
+        cursor: pointer;
+        color: #fff;
+      }
     }
   }
 
