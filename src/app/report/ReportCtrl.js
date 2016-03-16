@@ -47,7 +47,6 @@
           data: {'encounter': $scope.encounters},
 
         }).then(function(response){
-          $state.go('report-filed');
           $state.go('encounters');
 
         }, function(error){
