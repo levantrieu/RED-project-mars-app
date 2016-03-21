@@ -4,7 +4,7 @@ Please view the site deployed site on [Firebase](https://mars-encounters.firebas
 
 **Project Brief**
 
-This is an app that allows a user to register and log a report of an alien encounter. It is built with the Angular framework.
+This is a single page app that allows a user to register and log a report of an alien encounter. It is built with the Angular framework. The main objective of this project is to work with an API using the GET and POST requests. The GET requests are used to populate dropdown lists and display a list of all logged reports. The POST request is used to pass new reports to the API.
 
 **Tools and Methods Used**
 
